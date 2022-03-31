@@ -7,6 +7,7 @@ const Navbar = () => {
             <h1>React Router Site</h1>
             <CustomLink to='/'>Home</CustomLink>
             <CustomLink to='/friends'>Friends</CustomLink>
+            <CustomLink to='/posts'>Posts</CustomLink>
             <CustomLink to='/about'>About</CustomLink>
         </div>
     );
