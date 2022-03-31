@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Header />}></Route>
         <Route path='/friends' element={<Friends />}></Route>
-        <Route path="/friend/:friendID" element={<FriendDetail />}></Route>
+        <Route path="/friends/:friendID" element={<FriendDetail />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/*' element={<Error />}></Route>
       </Routes>

@@ -5,13 +5,13 @@ const Friend = (props) => {
     const { name, username, id } = props.friend
     const navigate = useNavigate()
     const showFriend = () => {
-        const path = `friend/${id}`
+        const path = `${id}`
         navigate(path)
     }
     return (
         <div>
             <h3>Name of friend: {name}</h3>
-            <Link to={'/friend/' + id}>Show Details</Link>
+            <Link to={'/friends/' + id}>Show Details</Link>
             <button onClick={showFriend}>{username}:{id}</button>
         </div>
     );
