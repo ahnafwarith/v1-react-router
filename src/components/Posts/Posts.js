@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Posts = () => {
     const [posts, handlePost] = useState([])
@@ -14,6 +14,7 @@ const Posts = () => {
             {
                 posts.map(post => <Link to={`/posts/${post.id}`} key={post?.id}>{post?.id}</Link>)
             }
+            <Outlet></Outlet>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import Error from './components/Error/Error';
 import Navbar from './components/Navbar/Navbar';
 import FriendDetail from './components/FriendDetail/FriendDetail'
 import Posts from './components/Posts/Posts';
+import PostDetail from './components/PostDetail/PostDetail';
 /* import  */
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
         <Route path='/friends' element={<Friends />}></Route>
         <Route path="/friends/:friendID" element={<FriendDetail />}></Route>
         <Route path='/about' element={<About />}></Route>
-        <Route path='/posts' element={<Posts />}></Route>
+        <Route path='/posts' element={<Posts />}>
+          <Route path=':postID' element={<PostDetail />}></Route>
+        </Route>
         <Route path='/*' element={<Error />}></Route>
       </Routes>
     </div >
