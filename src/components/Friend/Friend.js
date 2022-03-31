@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Friend = (props) => {
     const { name, username, id } = props.friend
@@ -11,6 +11,7 @@ const Friend = (props) => {
     return (
         <div>
             <h3>Name of friend: {name}</h3>
+            <Link to={'/friend/' + id}>Show Details</Link>
             <button onClick={showFriend}>{username}:{id}</button>
         </div>
     );
